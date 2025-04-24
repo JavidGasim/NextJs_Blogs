@@ -14,14 +14,6 @@ body {
   padding: 0;
 }
 
-html,
-body,
-#root,
-#app {
-  height: 100%;
-  background-color: var(--tt-bg-color);
-}
-
 .tiptap.ProseMirror {
   font-family: "DM Sans", sans-serif;
 }
