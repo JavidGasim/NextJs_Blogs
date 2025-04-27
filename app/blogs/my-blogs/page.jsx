@@ -129,13 +129,8 @@ const page = () => {
         >
           Load More ...
         </button>
-        <img
-          onClick={() => setPage(1)}
-          src={theme ? "/icons/reset2.svg" : "/icons/reset.svg"}
-          className="mt-[40px] ml-[20px]"
-          width={30}
-          height={30}
-        />
+        <button onClick={() => setPage(1)} className="w-fit border-[1px] rounded-[5px] px-[30px] py-[10px] mt-[40px] text-[16px] leading-[24px] font-medium text-[#696A75]">Go Back</button>
+
       </div>
     </div>
   );
