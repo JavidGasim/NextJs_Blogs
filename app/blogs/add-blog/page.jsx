@@ -72,7 +72,7 @@ const AddBlog = () => {
     <div
       className={`w-full flex flex-col items-center ${theme ? "bg-[#181A2A] text-white" : "bg-white text-[#232536]"}`}
     >
-      <h1 className="mt-[50px] text-[48px] leading-[64px] font-bold">
+      <h1 className="mt-[35px] text-[30px] leading-[64px] font-bold">
         Write a new blog
       </h1>
       <form className="w-fit flex flex-col items-center">
@@ -82,7 +82,7 @@ const AddBlog = () => {
             setBlog((prevState) => ({ ...prevState, title: e.target.value }))
           }
           placeholder="Add title for blog"
-          className="w-[700px] mt-[50px] px-[20px] py-[20px] text-[16px] leading-[28px] text-[#232536] border-[2px] border-gray-500 rounded-[5px]"
+          className="w-[700px] mt-[50px] px-[10px] py-[10px] text-[16px] leading-[28px] text-[#232536] border-[2px] border-gray-500 rounded-[5px]"
         />
         <div className="relative">
           <select
@@ -92,7 +92,7 @@ const AddBlog = () => {
                 category: e.target.value,
               }))
             }
-            className="appearance-none w-[700px] text-[#232536] mt-[20px] px-[20px] py-[20px] border-[2px] border-gray-500 rounded-[5px] shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-[16px] leading-[28px] bg-white"
+            className="appearance-none w-[700px] text-[#232536] mt-[20px] px-[10px] py-[10px] border-[2px] border-gray-500 rounded-[5px] shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-[16px] leading-[28px] bg-white"
             defaultValue={blog.category}
           >
             <option value="category" disabled>
@@ -118,7 +118,7 @@ const AddBlog = () => {
             }))
           }
           placeholder="Add thumbnail image"
-          className="w-[700px] mt-[20px] pl-[20px] py-[20px] text-[16px] leading-[28px] text-[#232536] border-[2px] border-gray-500 rounded-[5px]"
+          className="w-[700px] mt-[20px] pl-[10px] py-[10px] text-[16px] leading-[28px] text-[#232536] border-[2px] border-gray-500 rounded-[5px]"
         />
 
         <TextEditor setBlogBody={setBlogBody} />
@@ -126,7 +126,7 @@ const AddBlog = () => {
         <button
           onClick={addBlog}
           type="button"
-          className="w-full my-[40px] py-[20px] bg-[#FFD050] text-[#232536] text-[24px] leading-[32px] font-bold rounded-[5px]"
+          className="w-full my-[40px] py-[15px] bg-[#FFD050] text-[#232536] text-[24px] leading-[32px] font-bold rounded-[5px]"
         >
           Submit
         </button>

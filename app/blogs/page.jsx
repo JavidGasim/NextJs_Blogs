@@ -45,7 +45,7 @@ const Blogs = () => {
         {blogs[0]?.thumbnail && (
           <img
             alt={blogs[0]?.thumbnail}
-            className="w-full h-[450px] rounded-[20px]"
+            className="w-full h-[300px] rounded-[20px]"
             src={blogs[0]?.thumbnail}
           />
         )}
@@ -86,13 +86,13 @@ const Blogs = () => {
           <Link
             href={`/blogs/${blog?.id}`}
             key={blog?.id}
-            className="w-full border-[1px] border-[#E8E8EA] rounded-[12px] p-[15px] flex flex-col justify-between"
+            className="w-full h-[350px] border-[1px] border-[#E8E8EA] rounded-[12px] p-[15px] flex flex-col justify-between"
           >
             <header>
               {blog?.thumbnail && (
                 <img
                   src={blog?.thumbnail}
-                  className="w-full h-[250px] object-cover rounded-[6px]"
+                  className="w-full h-[150px] object-cover rounded-[4px]"
                 />
               )}
               {blog?.categories?.name && (
@@ -134,15 +134,17 @@ const Blogs = () => {
         ))}
       </div>
 
-      <div className="w-full flex flex-row justify-center">
+      <div className="w-full flex justify-center">
         <button
           disabled={totalPages > page ? false : true}
           onClick={pagination}
-          className="w-fit border-[1px] rounded-[10px] px-[30px] py-[10px] mt-[40px] text-[16px] leading-[24px] font-medium text-[#696A75]"
+          className="w-fit border-[1px] rounded-[5px] px-[30px] py-[10px] mt-[40px] mr-[20px] text-[16px] leading-[24px] font-medium text-[#696A75]"
         >
           Load More ...
         </button>
-        <img onClick={() => setPage(1)} src={theme ? "/icons/reset2.svg" : "/icons/reset.svg"} className="mt-[40px] ml-[20px]" width={30} height={30} />
+        {/* <img onClick={() => setPage(1)} src={theme ? "/icons/reset2.svg" : "/icons/reset.svg"} className="mt-[40px] ml-[20px]" width={30} height={30} />
+         */}
+        <button onClick={() => setPage(1)} className="w-fit border-[1px] rounded-[5px] px-[30px] py-[10px] mt-[40px] text-[16px] leading-[24px] font-medium text-[#696A75]">Go Back</button>
       </div>
     </div>
   );
